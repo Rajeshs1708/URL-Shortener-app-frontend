@@ -1,0 +1,20 @@
+.inputSession {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 4rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.urlHeading {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.inputSession__error {
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+
+}
