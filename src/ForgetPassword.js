@@ -22,9 +22,6 @@ function ForgetPassword () {
           .then(res => {
             console.log(`OTP : ${res.data.otp}`)
             if (res.data.code === 200) {
-              const notify = () =>
-                toast.success(`*${res.data.message}*`, { theme: 'colored' })
-              notify()
               setError(`${res.data.message}    ${res.data.otp}`)
               setTimeout(() => {
                 navigate('/newPassword')
@@ -60,11 +57,9 @@ function ForgetPassword () {
       <div className='forgetPassword__container'>
         <form onSubmit={handleSubmit}>
           {error && <p className='alert alert-success'>{error}</p>}
-          <h1>Forget Password</h1>
+          <p className='display-4 text-center'>Forget Password</p>
           <div className='mb-3'>
-            <label htmlFor='exampleInputEmail1' className='form-label'>
-              Email address
-            </label>
+           
             <input
               value={email}
               onChange={e => setEmail(e.target.value)}

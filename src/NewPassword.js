@@ -22,8 +22,6 @@ function NewPassword() {
           .then(res => {
             console.log(res.data);
             if (res.data.code === 200) {
-              const notify = () => toast.success(`*${res.data.message}*`, { theme: 'colored' });
-              notify()
               setError(res.data.message)
               setTimeout(() => {
                 navigate('/')
@@ -53,14 +51,12 @@ function NewPassword() {
       <div className='newPassword__container'>
         <form onSubmit={handleSubmit}>
         {error && <p className='alert alert-success'>{error}</p>}
-          <h1>Set New Password</h1>
+        <p className='display-4 text-center'>Set New Password</p>
           <div className="mb-3">
-            <label htmlFor="exampleInputOtp" className="form-label">OTP</label>
             <input value={otp} onChange={e => setOtp(e.target.value)} type="otp" className="form-control" id="exampleInputOtp" aria-describedby="emailHelp" placeholder='Enter your OTP' />
           </div>
 
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword" className="form-label">New Password</label>
             <input value={password} onChange={e => setPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword" aria-describedby="emailHelp" placeholder='Enter your New Password' />
           </div>
           <button className="btn btn-primary">Submit</button>

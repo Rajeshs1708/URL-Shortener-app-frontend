@@ -89,7 +89,7 @@ function Profile() {
             </div>
           </div>
           <br />
-          <p className='inputSession__error'>{error}</p>
+          {error && <p className='alert alert-success'>{error}</p>}
         </form>
       </div>
 
