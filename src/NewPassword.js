@@ -52,7 +52,7 @@ function NewPassword() {
     <div className='newPassword'>
       <div className='newPassword__container'>
         <form onSubmit={handleSubmit}>
-          <p className='newPassword__containerError'>{error}</p>
+        {error && <p className='alert alert-success'>{error}</p>}
           <h1>Set New Password</h1>
           <div className="mb-3">
             <label htmlFor="exampleInputOtp" className="form-label">OTP</label>
