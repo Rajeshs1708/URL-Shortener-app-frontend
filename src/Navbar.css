@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color: #5072A7;
     border-bottom: 1px solid rgb(179, 154, 125);
     padding-bottom: 20px;
+    color: white;
 }
 
 .logo h1 {
@@ -17,14 +18,7 @@
     padding: 10px;
     flex-direction: column;
     justify-content: center;
-    padding: 5px;
+    padding: 15px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
-
-}
-
-.Navbar__message {
-    background-color: darkgreen;
-    color: white;
-    text-align: center;
 
 }
